@@ -1,0 +1,20 @@
+{
+    "account": [
+        {
+            "login" : "Dragan",
+            "password" : "admin" ,
+            "price" : 0
+        },
+        {
+            "login" : "Ami",
+            "password" : "pierdziami" ,
+            "price" : 0
+        },
+        {
+            "login" : "Grześ",
+            "password" : "Wieś" ,
+            "price" : 0
+        }
+    ]
+}
+
