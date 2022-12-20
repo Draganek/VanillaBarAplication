@@ -1,6 +1,6 @@
 "use strict";
 
-
+//Siema 
 // ======================================== Logowanie do strony ======================================== //
 
 let login_button = document.getElementById("submit_button");
