@@ -1,0 +1,17 @@
+{
+    "coctails": [
+        {
+            "name" : "Cosmopolitan",
+            "alcohols" : "wódka limonkowa,triple sec" ,
+            "fillers" : "sok żurawinowy,sok z limonki",
+            "price" : 9
+        },
+        {
+            "name" : "Wódka Sour",
+            "alcohols" : "wódka" ,
+            "fillers" : "sok z cytryny,syrop cukrowy",
+            "price" : 8
+        }
+    ]
+}
+

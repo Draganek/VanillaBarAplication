@@ -1,0 +1,177 @@
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dragan Bar</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+
+ <!-- ==================== Logowanie do strony ==================== -->
+
+    <div id="login_page" style="display: block">
+  <div class="login-box">
+    <h2>Login</h2>
+    <form>
+      <div class="user-box">
+        <input id="user_login" type="text" name="" required="">
+        <label>Username</label>
+      </div>
+      <div class="user-box">
+        <input id="user_password" type="password" name="" required="">
+        <label>Password</label>
+      </div>
+
+      <a href="#" id="submit_button">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Submit
+      </a>
+      <p><output id="login_info"></output></p>
+    </form>
+  </div>
+    </div>
+
+
+<!-- ==================== Menu Bar i góry ==================== -->
+
+  <div id="backstage" style="display:none">
+    <div class="topnav">
+      <a id="home" class="active" >Home</a>
+      <a id="news" >News</a>
+      <a id="contact">Contact</a>
+      <a id="about">About</a>
+      <a id="drinklist">Drink List</a>
+      <a >Random Drink</a>
+    </div>
+
+
+ <!-- ==================== Home Page ==================== -->
+
+  <div id="home_page" style="display:block">
+    <h1 style="padding-left: 15px; color: white;">
+      Witaj na stronie Głównej!
+    </h1>
+    <img id="mojito" src="images\mojito.jpg"></img>
+    <img id="mojito" src="images\mojito.jpg"></img>
+    <img id="mojito" src="images\mojito.jpg"></img>
+    <img id="mojito" src="images\mojito.jpg"></img>
+    <img id="mojito" src="images\mojito.jpg"></img>
+    <img id="mojito" src="images\mojito.jpg"></img>
+    <img id="mojito" src="images\mojito.jpg"></img>
+    <img id="mojito" src="images\mojito.jpg"></img>
+    <img id="mojito" src="images\mojito.jpg"></img>
+    <img id="mojito" src="images\mojito.jpg"></img>
+  </div>
+  
+
+ <!-- ==================== News Page ==================== -->
+
+ <div id="news_page" style="display:none">
+  <p class="news_info">
+    <a class="news_title">Status prac nad stroną:</a> Surowy niemożliwy do użytku
+  </p>
+  <p class="news_info">
+    <a class="news_title">Status strony:</a> <a style="color: red">Offline</a>
+  </p>
+  <p class="news_info">
+    <a class="news_title">Liczba osób zaangażowanych w tworzenie strony:</a> 1,5
+  </p>
+  <p class="news_info">
+    <a class="news_title">Data rozpoczęcia prac:</a> 30.11.2022
+  </p>
+  <p class="news_info">
+    <a class="news_title">Czas trwania projektu: </a> <output id="project_time"></output>
+  </p>
+
+</div>
+
+
+<!-- ==================== Contact Page ==================== -->
+
+<div id="contact_page" style="display:none">
+  <img id="autor" src="images\admin.jpg"></img>
+  <p class="news_info">
+    <a class="news_title">Autor i Administrator strony:</a> Radosław Draganek
+  </p>
+  <p class="news_info">
+    <a class="news_title">e-mail:</a> radek.draganek@gmail.com
+  </p>
+  <p class="news_info">
+    <a class="news_title">ig:</a> dragan_workout
+  </p>
+
+</div>
+
+
+<!-- ==================== About Page ==================== -->
+
+<div id="about_page" style="display:none">
+  <p class="news_info">
+    <a class="news_title">Strona do użytku w barze:</a> Dragan Bar
+  </p>
+ 
+
+</div>
+
+
+ <!-- ==================== Drink List Page ==================== -->
+
+  <div id="drink_list_page" style="display:none">
+
+  <a style="color: white ; font-size: 40px;">
+    Tu będzie zajebista lista drinków do wybrania lol
+  </a>
+
+  <div class="drink_label">
+    <div class="drink_element">
+      <img class="drink_img" src="images\mojito.jpg"></img>
+      <a style="font-size: 50px; color: white;">
+        Mojito
+      </a>
+      <br>
+      <a style="font-size: 50px; color: white;">
+        alkohol jaki tam trzeba
+      </a>
+    </div>
+    <div class="drink_element">
+      <img class="drink_img" src="images\mojito.jpg"></img>
+      <a style="font-size: 50px; color: white;">
+        Siemano
+      </a>
+    </div>
+    <div class="drink_element">
+      <img class="drink_img" src="images\mojito.jpg"></img>
+      <a style="font-size: 50px; color: white;">
+        Siemano
+      </a>
+    </div>
+    <div class="drink_element">
+      <img class="drink_img" src="images\mojito.jpg"></img>
+      <a style="font-size: 50px; color: white;">
+        Siemano
+      </a>
+    </div>
+    <div class="drink_element">
+      <img class="drink_img" src="images\mojito.jpg"></img>
+      <a style="font-size: 50px; color: white;">
+        Siemano
+      </a>
+    </div>
+
+
+
+
+  </div>
+</div>
+
+
+</div>
+</body>
+</html>
