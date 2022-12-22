@@ -6,14 +6,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dragan Bar</title>
 <link rel="stylesheet" href="style.css">
+<script src="login_menu.js" defer></script>
 <script src="script.js" defer></script>
+<script src="drink_list_picker.js" defer></script>
+
 </head>
 <body>
 
 
  <!-- ==================== Logowanie do strony ==================== -->
 
-    <div id="login_page" style="display: block">
+    <div id="login_page" style="display: none">
   <div class="login-box">
     <h2>Login</h2>
     <form>
@@ -41,7 +44,7 @@
 
 <!-- ==================== Menu Bar i góry ==================== -->
 
-  <div id="backstage" style="display:none">
+  <div id="backstage" style="display:block">
     <div class="topnav">
       <a id="home" class="active" >Home</a>
       <a id="news" >News</a>
@@ -129,46 +132,9 @@
     Tu będzie zajebista lista drinków do wybrania lol
   </a>
 
-  <div class="drink_label">
-    <div class="drink_element">
-      <img class="drink_img" src="images\mojito.jpg"></img>
-      <a style="font-size: 50px; color: white;">
-        Mojito
-      </a>
-      <br>
-      <a style="font-size: 50px; color: white;">
-        alkohol jaki tam trzeba
-      </a>
-    </div>
-    <div class="drink_element">
-      <img class="drink_img" src="images\mojito.jpg"></img>
-      <a style="font-size: 50px; color: white;">
-        Siemano
-      </a>
-    </div>
-    <div class="drink_element">
-      <img class="drink_img" src="images\mojito.jpg"></img>
-      <a style="font-size: 50px; color: white;">
-        Siemano
-      </a>
-    </div>
-    <div class="drink_element">
-      <img class="drink_img" src="images\mojito.jpg"></img>
-      <a style="font-size: 50px; color: white;">
-        Siemano
-      </a>
-    </div>
-    <div class="drink_element">
-      <img class="drink_img" src="images\mojito.jpg"></img>
-      <a style="font-size: 50px; color: white;">
-        Siemano
-      </a>
-    </div>
-
-
-
-
+  <div class="drink_label" id="drink_list_show">
   </div>
+  
 </div>
 
 

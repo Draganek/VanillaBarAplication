@@ -269,11 +269,17 @@
 .drink_element {
   padding: 20px;
   width: 350px;
-  height: 600px;
+  height: 400px;
   float: left;
   text-align: center;
 }
 
 .drink_img {
   width: 350px;
+  height: 350px;
+}
+
+.drink_name{
+  font-size: larger;
+  color: white;
 }
