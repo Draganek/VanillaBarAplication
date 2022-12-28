@@ -8,36 +8,43 @@ let user_login2 = document.getElementById("user_login");
 let user_password2 = document.getElementById("user_password");
 let login_status = document.getElementById("login_info");
 
-login_button.addEventListener("click", () => login_user(user_login,user_password));
+login_button.addEventListener("click", () => login_user(user_login, user_password));
 
-async function login_user(login, password){
-    let response = await fetch(`users.json`);
-    let obiekt = await response.json();
-        if (login.value === "admin" && password.value === "admin"){
-            login_status.value = "Chłop co wpisał admin admin xdddd"
-            return;
+async function login_user(username, password) {
+    login_status.value = '';
+    if (username.value === 'admin' && password.value === 'admin') {
+        login_status.value = 'Chłop co wpisał admin admin xdddd';
+        return;
+    }
+    if (username.value === '' || password.value === '') {
+        login_status.value = 'Uzupełnij pola logowania';
+        return;
+    }
+    const params = {
+        method: 'GET',
+        cors: 'no-cors',
+        cache: 'no-cache'
+    };
+    try {
+        let res = await fetch('http://localhost:6969/login?' + new URLSearchParams({
+            username: username.value,
+            password: password.value
+        }), params);
+        const isCredentialsValid = await res.json();
+        if (isCredentialsValid) {
+            login_status.value = 'Logowanie...';
+            setTimeout(() => {
+                document.getElementById("home_page").style.display = 'block';
+                document.getElementById("backstage").style.display = 'block';
+                document.getElementById("login_page").style.display = 'none';
+            }, 1000)
+        } else {
+            login_status.value = 'Niepoprawne dane logowania';
         }
-        if (login.value === "" || password.value === ""){
-            login_status.value = "Uzupełnij pola logowania"
-            return;
-        }
-        for (let check of obiekt.account){
-        
-            if (check.login === login.value){
-                if(check.password === password.value){
-                    login_status.value = "Logowanie..."
-                    setTimeout(() => {
-                        document.getElementById("home_page").style.display='block';
-                        document.getElementById("backstage").style.display='block';
-                        document.getElementById("login_page").style.display='none';
-                    },1000)
-                    return;
-                }
-                login_status.value = "Błędne hasło"
-                return;
-            }
-        }
-        login_status.value = "Nie ma takiego użytkownika"
+    } catch (err) {
+        console.log(err);
+        login_status.value = 'Niepoprawne dane logowania';
+    }
 }
 
 
@@ -53,7 +60,7 @@ homeButton.addEventListener("click", () => activepage("home", "drinklist", "news
 
 let newsButton = document.getElementById("news")
 newsButton.addEventListener("click", () => show("news_page", "home_page", "drink_list_page", "contact_page", "about_page"));
-newsButton.addEventListener("click", () => activepage("news","home", "drinklist", "contact", "about"));
+newsButton.addEventListener("click", () => activepage("news", "home", "drinklist", "contact", "about"));
 
 let contactButton = document.getElementById("contact")
 contactButton.addEventListener("click", () => show("contact_page", "news_page", "home_page", "drink_list_page", "about_page"));
@@ -64,11 +71,11 @@ aboutButton.addEventListener("click", () => show("about_page", "contact_page", "
 aboutButton.addEventListener("click", () => activepage("about", "contact", "news", "home", "drinklist"));
 
 function show(show, hide, hide2, hide3, hide4) {
-    document.getElementById(show).style.display='block';
-    document.getElementById(hide).style.display='none';
-    document.getElementById(hide2).style.display='none';
-    document.getElementById(hide3).style.display='none';
-    document.getElementById(hide4).style.display='none';
+    document.getElementById(show).style.display = 'block';
+    document.getElementById(hide).style.display = 'none';
+    document.getElementById(hide2).style.display = 'none';
+    document.getElementById(hide3).style.display = 'none';
+    document.getElementById(hide4).style.display = 'none';
 }
 
 function activepage(active, deactive, deactive2, deactive3, deactive4) {
@@ -97,7 +104,7 @@ setInterval(() => {
     let hours = test2.getHours();
     let minutes = test2.getMinutes();
     let seconds = test2.getSeconds();
-    time.value = `${(years-1970).toString().padStart(2, '0')}y-${months.toString().padStart(2, '0')}m-${days.toString().padStart(2, '0')}d ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    time.value = `${(years - 1970).toString().padStart(2, '0')}y-${months.toString().padStart(2, '0')}m-${days.toString().padStart(2, '0')}d ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
 }, 100);
 
 

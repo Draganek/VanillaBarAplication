@@ -1,20 +1,25 @@
-{
-    "account": [
-        {
-            "login" : "Dragan",
-            "password" : "admin" ,
-            "price" : 0
-        },
-        {
-            "login" : "Ami",
-            "password" : "pierdziami" ,
-            "price" : 0
-        },
-        {
-            "login" : "Grześ",
-            "password" : "Wieś" ,
-            "price" : 0
-        }
-    ]
-}
-
+[
+  {
+    "username": "Dragan",
+    "password": "admin",
+    "price": 0
+  },
+  {
+    "username": "Ami",
+    "password": "pierdziami",
+    "price": 0
+  },
+  {
+    "username": "Grześ",
+    "password": "Wieś",
+    "price": 0
+  },
+  {
+    "username": "test",
+    "password": "1234123"
+  },
+  {
+    "username": "Kuba",
+    "password": "kuba1"
+  }
+]
