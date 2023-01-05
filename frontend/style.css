@@ -167,10 +167,9 @@
     }
   }
   
-  #mojito {
-     width: 200px;
-     height: 200px;
-     padding: 20px;
+  #logo {
+     height: 100%;
+     width: 100%;
   }
 
   #srodek {
@@ -267,13 +266,24 @@
 }
 
 .drink_element {
-  padding: 20px;
-  width: 350px;
-  height: 600px;
+  padding: 0.2em;
+  width: 10em;
+  height: 12.0em;
   float: left;
   text-align: center;
 }
 
 .drink_img {
-  width: 350px;
+  width: 10em;
+  height: 10em;
+}
+
+.drink_name{
+  font-size: larger;
+  color: white;
+}
+
+.drink_window{
+  text-align: center;
+  height: 50em;
 }

@@ -4,14 +4,22 @@
             "name" : "Cosmopolitan",
             "alcohols" : "wódka limonkowa,triple sec" ,
             "fillers" : "sok żurawinowy,sok z limonki",
+            "link" : "https://cocktailbart.de/wp-content/uploads/2019/07/Cosmopolitan-Cocktail-Rezept.jpg",
             "price" : 9
         },
         {
             "name" : "Wódka Sour",
             "alcohols" : "wódka" ,
-            "fillers" : "sok z cytryny,syrop cukrowy",
+            "fillers" : ["sok z cytryny","syrop cukrowy"],
+            "link" : "https://koktajl.tv/file/vodkasourprzepis.png",
+            "price" : 8
+        },
+        {
+            "name" : "Illusion",
+            "alcohols" : ["wódka","Triple sec", "likier melonowy"],
+            "fillers" : ["sok ananasowy"],
+            "link" : "https://www.mojbar.pl/wp-content/uploads/2018/12/ILLUSION.jpg",
             "price" : 8
         }
     ]
 }
-
