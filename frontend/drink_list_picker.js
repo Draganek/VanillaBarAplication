@@ -1,11 +1,18 @@
 "use strict";
 
-
-
-async function login_user() {
+async function all_drink_choices() {
+    let drink_list_page = document.getElementById("drink_list_page");
+    let created_list = document.getElementById("drink_list_show");
+    try {
+        drink_list_page.removeChild(created_list);
+    }
+    catch {
+    }
+    let div_holder = document.createElement("div");
+    div_holder.className = "drink_label";
+    div_holder.id = "drink_list_show";
+    drink_list_page.append(div_holder);
     let drink_holder = document.getElementById("drink_list_show");
-    
-
     let response = await fetch(`menulist.json`);
     let obiekt = await response.json();
     for (let element of obiekt.coctails) {
@@ -17,9 +24,17 @@ async function login_user() {
         div.className = "drink_element";
         img.className = "drink_img";
         img.src = element.link;
+        div.addEventListener("click", () => drink_choice(name.textContent));
         div.append(img);
         div.append(name);
         drink_holder.append(div);
     }
 }
-login_user();
+
+async function drink_choice(drink_name){
+    let drink_list_page = document.getElementById("drink_list_page");
+    let created_list = document.getElementById("drink_list_show");
+    drink_list_page.removeChild(created_list);
+    let div = document.createElement("div");
+    div.className = "drink_window";
+}
