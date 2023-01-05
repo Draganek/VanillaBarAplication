@@ -1,6 +1,6 @@
 "use strict";
 
-async function all_drink_choices() {
+async function allDrinkChoices() {
     let drink_list_page = document.getElementById("drink_list_page");
     let created_list = document.getElementById("drink_list_show");
     try {
@@ -22,14 +22,18 @@ async function all_drink_choices() {
         div.className = "drink_element";
         img.className = "drink_img";
         img.src = element.link;
-        div.addEventListener("click", () => drink_choice(name.textContent));
+        div.addEventListener("click", () => drinkChoice(name.textContent, "drinklist", "drink_list_page", "cocktailShowPage"));
         div.append(img);
         div.append(name);
         drink_holder.append(div);
     }
 }
 
-async function drink_choice(drink_name) {
+async function drinkChoice(drinkName, menuBar, previousView, cocktailView){
+    document.getElementById(menuBar).classList.value = "hover";
+    document.getElementById(previousView).style.display='none';
+    document.getElementById(cocktailView).style.display='block';
+
     let drink_list_page = document.getElementById("drink_list_page");
     let created_list = document.getElementById("drink_list_show");
     drink_list_page.removeChild(created_list);

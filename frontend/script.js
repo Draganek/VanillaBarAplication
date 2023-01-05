@@ -5,7 +5,7 @@
 let drinkListButton = document.getElementById("drinklist")
 drinkListButton.addEventListener("click", () => show("drink_list_page", "home_page", "news_page", "contact_page", "about_page"));
 drinkListButton.addEventListener("click", () => activepage("drinklist", "home", "news", "contact", "about"));
-drinkListButton.addEventListener("click", () => all_drink_choices());
+drinkListButton.addEventListener("click", () => allDrinkChoices());
 
 let homeButton = document.getElementById("home")
 homeButton.addEventListener("click", () => show("home_page", "drink_list_page", "news_page", "contact_page", "about_page"));
