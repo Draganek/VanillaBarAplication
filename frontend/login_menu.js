@@ -8,8 +8,6 @@ const LoginStatuses = {
 }
 
 let login_button = document.getElementById("submit_button");
-let user_login2 = document.getElementById("user_login");
-let user_password2 = document.getElementById("user_password");
 let login_status = document.getElementById("login_info");
 
 login_button.addEventListener("click", () => login_user(user_login, user_password));
@@ -39,5 +37,6 @@ async function login_user(login, password) {
             document.getElementById("backstage").style.display = 'block';
             document.getElementById("login_page").style.display = 'none';
         }, 1000)
+        return;
     }
 }

@@ -5,9 +5,7 @@ async function all_drink_choices() {
     let created_list = document.getElementById("drink_list_show");
     try {
         drink_list_page.removeChild(created_list);
-    }
-    catch {
-    }
+    } catch { }
     let div_holder = document.createElement("div");
     div_holder.className = "drink_label";
     div_holder.id = "drink_list_show";
@@ -31,7 +29,7 @@ async function all_drink_choices() {
     }
 }
 
-async function drink_choice(drink_name){
+async function drink_choice(drink_name) {
     let drink_list_page = document.getElementById("drink_list_page");
     let created_list = document.getElementById("drink_list_show");
     drink_list_page.removeChild(created_list);
