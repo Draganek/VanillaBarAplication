@@ -1,5 +1,5 @@
 {
-    "coctails": [
+    "cocktails": [
         {
             "name" : "Cosmopolitan",
             "alcohols" : "wódka limonkowa,triple sec" ,
@@ -16,7 +16,7 @@
         },
         {
             "name" : "Illusion",
-            "alcohols" : ["wódka","Triple sec", "likier melonowy"],
+            "alcohols" : ["wódka", "Triple sec", "likier melonowy"],
             "fillers" : ["sok ananasowy"],
             "link" : "https://www.mojbar.pl/wp-content/uploads/2018/12/ILLUSION.jpg",
             "price" : 8
