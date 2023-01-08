@@ -19,7 +19,7 @@ export class DrinkList {
         let drink_holder = document.getElementById("drink_list_show");
         let response = await fetch('drink-list/menulist.json');
         let obiekt = await response.json();
-        for (let element of obiekt.coctails) {
+        for (let element of obiekt.cocktails) {
             let div = document.createElement("div");
             let img = document.createElement("img");
             let name = document.createElement("a")
